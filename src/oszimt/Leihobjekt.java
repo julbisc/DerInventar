@@ -1,14 +1,54 @@
 package oszimt;
 
 public class Leihobjekt {
-    private static int ID = 0;
-    private String beschreibung;
+    private int id;
+    private String name;
     private String typ;
+    private String beschreibung;
 
-    public Leihobjekt(String beschreibung,String typ){
-        this.beschreibung = beschreibung;
+    public Leihobjekt(int id, String name, String typ, String beschreibung) {
+        this.id = id;
+        this.name = name;
         this.typ = typ;
+        this.beschreibung = beschreibung;
+    }
 
-        ID = ID + 1;
+    @Override
+    public String toString() {
+        return "Leihobjekt{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", typ='" + typ + '\'' +
+                ", beschreibung='" + beschreibung + '\'' +
+                '}';
+    }
+
+    // Getter Setter
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
+
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
     }
 }
