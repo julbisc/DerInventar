@@ -1,8 +1,77 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="oszimt.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Übersicht">
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="30.0" vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints minHeight="30.0" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1">
+                    <items>
+                      <Button fx:id="tab1_objekt_such_btn" mnemonicParsing="false" text="Suchen" />
+                        <TextField fx:id="tab1_objekt_such_txt" />
+                    </items>
+                  </ToolBar>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <Button fx:id="tab1_leiher_such_btn" mnemonicParsing="false" text="Suchen" />
+                        <TextField fx:id="tab1_leiher_such_txt" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar fx:id="tab1_buchen_tb" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <items>
+                      <Button fx:id="tab1_buchen_btn" mnemonicParsing="false" text="Buchen" />
+                    </items>
+                  </ToolBar>
+                  <TableView fx:id="tab1_leiher_tav" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="tab1_leiher_ID_tac" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="tab1_leiher_nachname_tac" prefWidth="75.0" text="Nachname" />
+                        <TableColumn fx:id="tab1_leiher_vorname_tac" prefWidth="75.0" text="Vorname" />
+                        <TableColumn fx:id="tab1_leiher_typ_tac" prefWidth="75.0" text="Typ" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="objekt_tav" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="tab1_objekt_ID_tac" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="tab1_objekt_Name_tac" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="tab1_objekt_beschreibung_tac" prefWidth="149.0" text="Beschreibung" />
+                    </columns>
+                  </TableView>
+               </children>
+            </GridPane>
+         </content>
+    </Tab>
+    <Tab text="Ausleiher">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+      <Tab text="Ausleihinventar">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
