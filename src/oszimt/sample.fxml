@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
-    <Tab text="Übersicht">
+    <Tab fx:id="tab1_tab" text="Übersicht">
          <content>
-            <GridPane>
+            <GridPane fx:id="tab1_grp">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -27,16 +29,16 @@
                 <RowConstraints minHeight="30.0" vgrow="NEVER" />
               </rowConstraints>
                <children>
-                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1">
+                  <ToolBar fx:id="tab1_objekt_such_tlb" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1">
                     <items>
                       <Button fx:id="tab1_objekt_such_btn" mnemonicParsing="false" text="Suchen" />
-                        <TextField fx:id="tab1_objekt_such_txt" />
+                        <TextField fx:id="tab1_objekt_such_txf" />
                     </items>
                   </ToolBar>
-                  <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+                  <ToolBar fx:id="tab1_leiher_such_tlb" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
                      <items>
                         <Button fx:id="tab1_leiher_such_btn" mnemonicParsing="false" text="Suchen" />
-                        <TextField fx:id="tab1_leiher_such_txt" />
+                        <TextField fx:id="tab1_leiher_such_txf" />
                      </items>
                   </ToolBar>
                   <ToolBar fx:id="tab1_buchen_tb" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -63,15 +65,111 @@
             </GridPane>
          </content>
     </Tab>
-    <Tab text="Ausleiher">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-      </content>
+    <Tab fx:id="tab2_tab" text="Ausleiher">
+         <content>
+            <GridPane fx:id="tab2_grp">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="tab2_ID_txt" />
+                  <Label fx:id="tab2_ID_lbl" prefHeight="31.0" prefWidth="128.0" text="Ausleiher - ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tab2_nachname_lbl" prefHeight="31.0" prefWidth="105.0" text="Nachname" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tab2_nachname_txt" GridPane.rowIndex="1" />
+                  <TextField fx:id="tab2_vorname_txt" GridPane.rowIndex="2" />
+                  <Label fx:id="tab2_vorname_lbl" prefHeight="31.0" prefWidth="89.0" text="Vorname" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="tab2_typ_cbx" prefHeight="25.0" prefWidth="180.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label fx:id="tab2_typ_lbl" text="Typ" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="tab2_einpflegen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tab2_anzeigen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tab2_loeschen_btn1" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </content>
     </Tab>
-      <Tab text="Ausleihinventar">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
+      <Tab fx:id="tab3_tab" text="Ausleihinventar">
+         <content>
+            <GridPane fx:id="tab3_grp">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="tab3_ID_txt" />
+                  <Label fx:id="tab3_ID_lbl" text="Leihobjekt ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="tab3_typ_cbx" prefHeight="25.0" prefWidth="180.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label fx:id="tab3_typ_lbl" text="Objekt Typ" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tab3_beschreib_lbl" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tab3_beschreib_txt" GridPane.rowIndex="2" />
+                  <Button fx:id="tab3_einpflegen_btn" mnemonicParsing="false" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tab3_loeschen_btn" mnemonicParsing="false" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tab3_anzeigen_btn" mnemonicParsing="false" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </content></Tab>
   </tabs>
 </TabPane>
