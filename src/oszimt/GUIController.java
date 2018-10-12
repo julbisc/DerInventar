@@ -1,5 +1,6 @@
 package oszimt;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -8,6 +9,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToolBar;
 import javafx.scene.layout.GridPane;
 
@@ -108,6 +110,9 @@ public class GUIController {
 
     @FXML
     private Button tab2_loeschen_btn1;
+    
+    @FXML
+    private ToggleButton tab2_umschalt_toggletbn;
 
     @FXML
     private Tab tab3_tab;
@@ -141,5 +146,56 @@ public class GUIController {
 
     @FXML
     private Button tab3_anzeigen_btn;
+    
+    @FXML
+    void tab2_anzeigen_btn_action(ActionEvent event) {
+    	
+    }
+
+    @FXML
+    void tab2_einpflegen_btn_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void tab2_loeschen_btn1_action(ActionEvent event) {
+
+    }
+    
+	boolean t = true;
+    @FXML
+    void tab2_togglebtn_action(ActionEvent event) {
+    	
+    	if(t) {
+    		tab2_einpflegen_btn.setDisable(true);
+        	tab2_loeschen_btn1.setDisable(true);
+          	tab2_nachname_txt.setDisable(true);
+        	tab2_vorname_txt.setDisable(true);
+    	}
+    	else {
+    		tab2_einpflegen_btn.setDisable(false);
+        	tab2_loeschen_btn1.setDisable(false);
+        	tab2_nachname_txt.setDisable(false);
+        	tab2_vorname_txt.setDisable(false);
+		}
+    	
+    	t = !t;
+    }
+
+    @FXML
+    void tab3_anzeigen_btn_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void tab3_einpflegen_btn_action(ActionEvent event) {
+
+    }
+
+    @FXML
+    void tab3_loeschen_btn_action(ActionEvent event) {
+
+    }
+
 
 }
