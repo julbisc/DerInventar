@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<TabPane fx:controller="oszimt.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oszimt.Controller">
   <tabs>
     <Tab fx:id="tab1_tab" text="Übersicht">
          <content>
@@ -80,19 +80,19 @@
               </rowConstraints>
                <children>
                   <TextField fx:id="tab2_ID_txt" />
-                  <Label fx:id="tab2_ID_lbl" prefHeight="31.0" prefWidth="128.0" text="Ausleiher - ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                  <Label fx:id="tab2_ID_lbl" prefHeight="31.0" prefWidth="150.0" text="Ausleiher - ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tab2_nachname_lbl" prefHeight="31.0" prefWidth="105.0" text="Nachname" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <Label fx:id="tab2_nachname_lbl" prefHeight="31.0" prefWidth="150.0" text="Nachname" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
                   <TextField fx:id="tab2_nachname_txt" GridPane.rowIndex="1" />
                   <TextField fx:id="tab2_vorname_txt" GridPane.rowIndex="2" />
-                  <Label fx:id="tab2_vorname_lbl" prefHeight="31.0" prefWidth="89.0" text="Vorname" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Label fx:id="tab2_vorname_lbl" prefHeight="31.0" prefWidth="100.0" text="Vorname" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -136,18 +136,18 @@
               </rowConstraints>
                <children>
                   <TextField fx:id="tab3_ID_txt" />
-                  <Label fx:id="tab3_ID_lbl" text="Leihobjekt ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                  <Label fx:id="tab3_ID_lbl" prefHeight="31.0" prefWidth="152.0" text="Leihobjekt ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="tab3_typ_cbx" prefHeight="25.0" prefWidth="180.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Label fx:id="tab3_typ_lbl" text="Objekt Typ" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <Label fx:id="tab3_typ_lbl" prefHeight="31.0" prefWidth="150.0" text="Objekt Typ" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tab3_beschreib_lbl" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Label fx:id="tab3_beschreib_lbl" prefHeight="31.0" prefWidth="150.0" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
