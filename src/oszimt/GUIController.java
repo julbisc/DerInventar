@@ -162,23 +162,32 @@ public class GUIController {
 
     }
     
-	boolean t = true;
+	boolean t = false;
     @FXML
     void tab2_togglebtn_action(ActionEvent event) {
     	
     	if(t) {
+    		tab2_anzeigen_btn.setDisable(false);
+    		tab2_ID_txt.setDisable(false);
+    		
     		tab2_einpflegen_btn.setDisable(true);
         	tab2_loeschen_btn1.setDisable(true);
           	tab2_nachname_txt.setDisable(true);
         	tab2_vorname_txt.setDisable(true);
+        	tab2_typ_cbx.setDisable(true);
+
     	}
     	else {
+    		tab2_anzeigen_btn.setDisable(true);
+    		tab2_ID_txt.setDisable(true);
+    		
     		tab2_einpflegen_btn.setDisable(false);
         	tab2_loeschen_btn1.setDisable(false);
         	tab2_nachname_txt.setDisable(false);
         	tab2_vorname_txt.setDisable(false);
+        	tab2_typ_cbx.setDisable(false);
+
 		}
-    	//TEST
     	t = !t;
     }
 
