@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.152" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oszimt.GUIController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oszimt.GUIController">
   <tabs>
     <Tab fx:id="tab1_tab" text="Übersicht">
          <content>
@@ -156,7 +156,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tab3_beschreib_lbl" prefHeight="31.0" prefWidth="150.0" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Label fx:id="tab3_beschreib_lbl" prefHeight="31.0" prefWidth="158.0" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <font>
                         <Font size="21.0" />
                      </font>
