@@ -178,7 +178,7 @@ public class GUIController {
         	tab2_nachname_txt.setDisable(false);
         	tab2_vorname_txt.setDisable(false);
 		}
-    	
+    	//TEST
     	t = !t;
     }
 
