@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -112,21 +113,26 @@
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
-                  <Button fx:id="tab2_einpflegen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="tab2_einpflegen_btn" mnemonicParsing="false" onAction="#tab2_einpflegen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab2_anzeigen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="tab2_anzeigen_btn" mnemonicParsing="false" onAction="#tab2_anzeigen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab2_loeschen_btn1" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="tab2_loeschen_btn1" mnemonicParsing="false" onAction="#tab2_loeschen_btn1_action" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <font>
-                        <Font size="21.0" />
+                        <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
+                  <ToggleButton fx:id="tab2_umschalt_toggletbn" mnemonicParsing="false" onAction="#tab2_togglebtn_action" prefHeight="63.0" prefWidth="173.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </ToggleButton>
                </children>
             </GridPane>
          </content>
@@ -162,17 +168,17 @@
                      </font>
                   </Label>
                   <TextField fx:id="tab3_beschreib_txt" GridPane.rowIndex="2" />
-                  <Button fx:id="tab3_einpflegen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="tab3_einpflegen_btn" mnemonicParsing="false" onAction="#tab3_einpflegen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab3_loeschen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="tab3_loeschen_btn" mnemonicParsing="false" onAction="#tab3_loeschen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab3_anzeigen_btn" mnemonicParsing="false" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="tab3_anzeigen_btn" mnemonicParsing="false" onAction="#tab3_anzeigen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="21.0" />
                      </font>
