@@ -90,19 +90,19 @@
               </rowConstraints>
                <children>
                   <TextField fx:id="tab2_ID_txt" />
-                  <Label fx:id="tab2_ID_lbl" prefHeight="31.0" prefWidth="150.0" text="Ausleiher - ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                  <Label fx:id="tab2_ID_lbl" text="Ausleiher - ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tab2_nachname_lbl" prefHeight="31.0" prefWidth="150.0" text="Nachname" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <Label fx:id="tab2_nachname_lbl" text="Nachname" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
                   <TextField fx:id="tab2_nachname_txt" GridPane.rowIndex="1" />
                   <TextField fx:id="tab2_vorname_txt" GridPane.rowIndex="2" />
-                  <Label fx:id="tab2_vorname_lbl" prefHeight="31.0" prefWidth="100.0" text="Vorname" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Label fx:id="tab2_vorname_lbl" text="Vorname" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
@@ -113,22 +113,22 @@
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
-                  <Button fx:id="tab2_einpflegen_btn" mnemonicParsing="false" onAction="#tab2_einpflegen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="tab2_einpflegen_btn" mnemonicParsing="false" onAction="#tab2_einpflegen_btn_action" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab2_anzeigen_btn" mnemonicParsing="false" onAction="#tab2_anzeigen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="tab2_anzeigen_btn" mnemonicParsing="false" onAction="#tab2_anzeigen_btn_action" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab2_loeschen_btn1" mnemonicParsing="false" onAction="#tab2_loeschen_btn1_action" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <Button fx:id="tab2_loeschen_btn1" mnemonicParsing="false" onAction="#tab2_loeschen_btn1_action" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <ToggleButton fx:id="tab2_umschalt_toggletbn" mnemonicParsing="false" onAction="#tab2_togglebtn_action" prefHeight="63.0" prefWidth="173.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <ToggleButton fx:id="tab2_umschalt_toggletbn" mnemonicParsing="false" onAction="#tab2_togglebtn_action" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
@@ -151,36 +151,36 @@
               </rowConstraints>
                <children>
                   <TextField fx:id="tab3_ID_txt" />
-                  <Label fx:id="tab3_ID_lbl" prefHeight="31.0" prefWidth="152.0" text="Leihobjekt ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                  <Label fx:id="tab3_ID_lbl" text="Leihobjekt ID" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                      <font>
-                        <Font size="21.0" />
+                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="tab3_typ_cbx" prefHeight="25.0" prefWidth="180.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Label fx:id="tab3_typ_lbl" prefHeight="31.0" prefWidth="150.0" text="Objekt Typ" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ChoiceBox fx:id="tab3_typ_cbx" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Label fx:id="tab3_typ_lbl" text="Objekt Typ" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <font>
-                        <Font size="21.0" />
+                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tab3_beschreib_lbl" prefHeight="31.0" prefWidth="158.0" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <Label fx:id="tab3_beschreib_lbl" text="Eigenschaften" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <font>
-                        <Font size="21.0" />
+                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Label>
                   <TextField fx:id="tab3_beschreib_txt" GridPane.rowIndex="2" />
-                  <Button fx:id="tab3_einpflegen_btn" mnemonicParsing="false" onAction="#tab3_einpflegen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="tab3_einpflegen_btn" mnemonicParsing="false" onAction="#tab3_einpflegen_btn_action" text="Einpflegen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
-                        <Font size="21.0" />
+                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab3_loeschen_btn" mnemonicParsing="false" onAction="#tab3_loeschen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button fx:id="tab3_loeschen_btn" mnemonicParsing="false" onAction="#tab3_loeschen_btn_action" text="Löschen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
-                        <Font size="21.0" />
+                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tab3_anzeigen_btn" mnemonicParsing="false" onAction="#tab3_anzeigen_btn_action" prefHeight="63.0" prefWidth="137.0" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button fx:id="tab3_anzeigen_btn" mnemonicParsing="false" onAction="#tab3_anzeigen_btn_action" text="Anzeigen" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
-                        <Font size="21.0" />
+                         <Font name="System Bold" size="21.0" />
                      </font>
                   </Button>
                </children>
