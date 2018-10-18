@@ -3,13 +3,11 @@ package oszimt;
 public class Leihobjekt {
     private int id;
     private String name;
-    private String typ;
     private String beschreibung;
 
     public Leihobjekt(int id, String name, String typ, String beschreibung) {
         this.id = id;
         this.name = name;
-        this.typ = typ;
         this.beschreibung = beschreibung;
     }
 
@@ -18,12 +16,11 @@ public class Leihobjekt {
         return "Leihobjekt{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", typ='" + typ + '\'' +
                 ", beschreibung='" + beschreibung + '\'' +
                 '}';
     }
 
-    // Getter Setter
+    // Getter | Setter
     public int getId() {
         return id;
     }
@@ -34,14 +31,6 @@ public class Leihobjekt {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getTyp() {
-        return typ;
-    }
-
-    public void setTyp(String typ) {
-        this.typ = typ;
     }
 
     public String getBeschreibung() {
