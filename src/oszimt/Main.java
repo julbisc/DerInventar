@@ -6,26 +6,33 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-
-import static java.lang.Thread.sleep;
-
 public class Main extends Application {
     public static DBManager dbManager = new DBManager();
+    private static MainWindowController mainWindowController;
+    static private Scene scene;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        Parent root = fxmlLoader.load(getClass().getResource("mainWindow.fxml").openStream());
+        mainWindowController =  (MainWindowController) fxmlLoader.getController();
         primaryStage.setTitle("Der Inventar");
-        primaryStage.setScene(new Scene(root, 1600, 900));
+        primaryStage.setScene(scene = new Scene(root, 1280, 720));
         primaryStage.show();
         //Testfunktionen
-
     }
 
 
     public static void main(String[] args) {
         launch(args);
 
+    }
+
+    public static MainWindowController getMainWindowController () {
+        return mainWindowController;
+    }
+
+    public static Scene getScene() {
+        return scene;
     }
 }

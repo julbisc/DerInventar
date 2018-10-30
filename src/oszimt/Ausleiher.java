@@ -20,6 +20,10 @@ public class Ausleiher {
                 '}';
     }
 
+    public String toFormattedString() {
+        return vorname + " " +  nachname + " mit der ID: " + id;
+    }
+
     // Getter und Setter
     public int getId() {
         return id;

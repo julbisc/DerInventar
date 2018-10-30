@@ -67,6 +67,7 @@ public class DBManager {
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM leihobjekte");
+            resultSet.next();
             leihobjektJdbcMapper.stream(resultSet).forEach(leihobjekts::add);
             statement.close();
             return leihobjekts;
@@ -80,7 +81,8 @@ public class DBManager {
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM ausleiher WHERE id = "  + id);
-            Ausleiher ausleiher = ausleiherJdbcMapper.map(resultSet);
+            resultSet.next();
+            Ausleiher ausleiher = ausleiherJdbcMapper.stream(resultSet).findAny().get();
             statement.close();
             return ausleiher;
         } catch (SQLException e) {
@@ -92,8 +94,9 @@ public class DBManager {
     public Leihobjekt getLeihobjektByID(int id) {
         try {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM leihobjekt WHERE id = "  + id);
-            Leihobjekt leihobjekt = leihobjektJdbcMapper.map(resultSet);
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM leihobjekte WHERE id = "  + id);
+            System.out.println(resultSet.getMetaData().getColumnCount());
+            Leihobjekt leihobjekt = leihobjektJdbcMapper.stream(resultSet).findAny().get();
             statement.close();
             return leihobjekt;
         } catch (SQLException e) {
@@ -102,39 +105,66 @@ public class DBManager {
         return null;
     }
 
-    public void einpflegen(Ausleiher ausleiher){
+    public boolean einpflegen(Ausleiher ausleiher){
         try {
             ausleiherIntegerCrud.create(connection, ausleiher);
-
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
-    public void einpflegen(Leihobjekt leihobjekt){
+    public boolean einpflegen(Leihobjekt leihobjekt){
         try {
             leihobjektIntegerCrud.create(connection, leihobjekt);
+            return true;
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
 
     }
 
-    public void loeschen(Ausleiher ausleiher){
+    public boolean loeschen(Ausleiher ausleiher){
         try {
             ausleiherIntegerCrud.delete(connection, ausleiher.getId());
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
-    public void loeschen(Leihobjekt leihobjekt){
+    public boolean loeschen(Leihobjekt leihobjekt){
         try {
             leihobjektIntegerCrud.delete(connection, leihobjekt.getId());
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
+    }
+    
+    public boolean update(Ausleiher ausleiher) {
+        try {
+            ausleiherIntegerCrud.update(connection, ausleiher);
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public boolean update(Leihobjekt leihobjekt) {
+        try {
+            leihobjektIntegerCrud.update(connection, leihobjekt);
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public int getMaxID(String table){
