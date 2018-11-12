@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="org.simpleflatmapper:sfm-jdbc:5.0.2" type="repository">
+    <properties maven-id="org.simpleflatmapper:sfm-jdbc:5.0.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/sfm-jdbc/5.0.2/sfm-jdbc-5.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/sfm-map/5.0.2/sfm-map-5.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/sfm-reflect/5.0.2/sfm-reflect-5.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/ow2-asm/6.2/ow2-asm-6.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/sfm-util/5.0.2/sfm-util-5.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/sfm-converter/5.0.2/sfm-converter-5.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
