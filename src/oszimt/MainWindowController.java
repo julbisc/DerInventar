@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class MainWindowController {
 
@@ -53,6 +54,9 @@ public class MainWindowController {
 
     @FXML
     private TableColumn<Leihobjekt, String> tab1_objekt_ID_tac;
+
+    @FXML
+    private TableColumn<Ausleiher, String> tab1_objekt_ausleiher;
 
     @FXML
     private TableView<Leihobjekt> tab1_objekt_tav;
@@ -235,5 +239,19 @@ public class MainWindowController {
         }
     }
 
+    @FXML
+    void tab1_buchen_btn_action() {
+        Leihobjekt leihobjekt = tab1_objekt_tav.getSelectionModel().getSelectedItem();
+        Ausleiher ausleiher = tab1_leiher_tav.getSelectionModel().getSelectedItem();
+        leihobjekt.setAusleiher(ausleiher.getId());
+        System.out.println(leihobjekt);
+        populateLeihobjektTable();
+        if (leihobjekt != null && ausleiher != null){
+            //FXCollections.observableArrayList(Main.dbManager.update(leihobjekt));
+        }
+        else{
+
+        }
+    }
 
 }
