@@ -20,17 +20,18 @@ public class DBManager {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection("jdbc:mysql://localhost/DerInventar?user=root");
 
-        leihobjektJdbcMapper = JdbcMapperFactory.newInstance().newBuilder(Leihobjekt.class)
-                .addMapping("id")
-                .addMapping("name")
-                .addMapping("beschreibung").mapper();
-        ausleiherJdbcMapper = JdbcMapperFactory.newInstance().newBuilder(Ausleiher.class)
-                .addMapping("id")
-                .addMapping("nachname")
-                .addMapping("vorname").mapper();
+            leihobjektJdbcMapper = JdbcMapperFactory.newInstance().newBuilder(Leihobjekt.class)
+                    .addMapping("id")
+                    .addMapping("name")
+                    .addMapping("beschreibung")
+                    .addMapping("aid").mapper();
+            ausleiherJdbcMapper = JdbcMapperFactory.newInstance().newBuilder(Ausleiher.class)
+                    .addMapping("id")
+                    .addMapping("nachname")
+                    .addMapping("vorname").mapper();
 
-        leihobjektIntegerCrud = JdbcMapperFactory.newInstance().crud(Leihobjekt.class, Integer.class).table(connection, "leihobjekte");
-        ausleiherIntegerCrud = JdbcMapperFactory.newInstance().crud(Ausleiher.class, Integer.class).table(connection, "ausleiher");
+            leihobjektIntegerCrud = JdbcMapperFactory.newInstance().crud(Leihobjekt.class, Integer.class).table(connection, "leihobjekte");
+            ausleiherIntegerCrud = JdbcMapperFactory.newInstance().crud(Ausleiher.class, Integer.class).table(connection, "ausleiher");
         } catch (Exception e) {
             e.printStackTrace();
         }

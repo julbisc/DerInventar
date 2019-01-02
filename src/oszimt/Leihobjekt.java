@@ -6,11 +6,11 @@ public class Leihobjekt {
     private String beschreibung;
     private int aid;
 
-    public Leihobjekt(int id, String name, String beschreibung) {
+    public Leihobjekt(int id, String name, String beschreibung, int aid) {
         this.id = id;
         this.name = name;
         this.beschreibung = beschreibung;
-        this.aid = 0;
+        this.aid = aid;
     }
 
     @Override
@@ -48,11 +48,11 @@ public class Leihobjekt {
         this.beschreibung = beschreibung;
     }
 
-    public int getAusleiher() {
+    public int getAid() {
         return aid;
     }
 
-    public void setAusleiher(int AID) {
+    public void setAid(int aid) {
         this.aid = aid;
     }
 

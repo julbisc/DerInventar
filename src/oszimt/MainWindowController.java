@@ -102,6 +102,7 @@ public class MainWindowController {
         tab1_objekt_ID_tac.setCellValueFactory(new PropertyValueFactory<>("id"));
         tab1_objekt_Name_tac.setCellValueFactory(new PropertyValueFactory<>("name"));
         tab1_objekt_beschreibung_tac.setCellValueFactory(new PropertyValueFactory<>("beschreibung"));
+        tab1_objekt_ausleiher.setCellValueFactory(new PropertyValueFactory<>("aid"));
         leihobjekts = FXCollections.observableArrayList(Main.dbManager.getLeihobjekte());
         filteredLeihobjekts = new FilteredList<>(leihobjekts, l -> true);
         leihobjekt_suche_txtfield.textProperty().addListener(((observable, oldValue, newValue) -> filteredLeihobjekts.setPredicate(leihobjekt -> {
@@ -243,15 +244,15 @@ public class MainWindowController {
     void tab1_buchen_btn_action() {
         Leihobjekt leihobjekt = tab1_objekt_tav.getSelectionModel().getSelectedItem();
         Ausleiher ausleiher = tab1_leiher_tav.getSelectionModel().getSelectedItem();
-        leihobjekt.setAusleiher(ausleiher.getId());
+        leihobjekt.setAid(ausleiher.getId());
         System.out.println(leihobjekt);
-        populateLeihobjektTable();
         if (leihobjekt != null && ausleiher != null){
-            //FXCollections.observableArrayList(Main.dbManager.update(leihobjekt));
+            Main.dbManager.update(leihobjekt);
         }
         else{
-
+            System.out.println("Shit is on Fire yo");
         }
+        populateLeihobjektTable();
     }
 
 }

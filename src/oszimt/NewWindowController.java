@@ -62,7 +62,7 @@ public class NewWindowController {
             Tools.error("Fehler", "Beide Felder müssen befüllt sein!");
             return;
         }
-        Leihobjekt leihobjekt = new Leihobjekt(Main.dbManager.getMaxID("leihobjekte"),name, beschreibung);
+        Leihobjekt leihobjekt = new Leihobjekt(Main.dbManager.getMaxID("leihobjekte"),name, beschreibung, 0);
         if (Main.dbManager.einpflegen(leihobjekt)){
             Tools.info("Erfolg", "Das Leihobjekt \"" + leihobjekt.toFormattedString() + "\" wurde erfolgreich angelegt");
             Main.getMainWindowController().initialize();
