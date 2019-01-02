@@ -242,15 +242,25 @@ public class MainWindowController {
 
     @FXML
     void tab1_buchen_btn_action() {
-        Leihobjekt leihobjekt = tab1_objekt_tav.getSelectionModel().getSelectedItem();
-        Ausleiher ausleiher = tab1_leiher_tav.getSelectionModel().getSelectedItem();
-        leihobjekt.setAid(ausleiher.getId());
-        System.out.println(leihobjekt);
-        if (leihobjekt != null && ausleiher != null){
+        try {
+            Leihobjekt leihobjekt = tab1_objekt_tav.getSelectionModel().getSelectedItem();
+            Ausleiher ausleiher = tab1_leiher_tav.getSelectionModel().getSelectedItem();
+            leihobjekt.setAid(ausleiher.getId());
             Main.dbManager.update(leihobjekt);
+        } catch (Exception e) {
+            Tools.error("Error","Kein Ausleiher/Leihobjekt ausgewählt.");
         }
-        else{
-            System.out.println("Shit is on Fire yo");
+        populateLeihobjektTable();
+    }
+
+    @FXML
+    void tab1_buchen_del_btn_action() {
+        try {
+            Leihobjekt leihobjekt = tab1_objekt_tav.getSelectionModel().getSelectedItem();
+            leihobjekt.setAid(0);
+            Main.dbManager.update(leihobjekt);
+        } catch (Exception e) {
+            Tools.error("Error", "Kein Leihpbjekt gewählt");
         }
         populateLeihobjektTable();
     }
