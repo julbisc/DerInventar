@@ -1,0 +1,1 @@
+XAMPP mit Apache und MySQL starten und entsprechende Datenbank importieren über PHPMyAdmin.
