@@ -260,7 +260,29 @@ public class MainWindowController {
             leihobjekt.setAid(0);
             Main.dbManager.update(leihobjekt);
         } catch (Exception e) {
-            Tools.error("Error", "Kein Leihpbjekt gewählt");
+            Tools.error("Error", "Kein Leihobjekt gewählt");
+        }
+        populateLeihobjektTable();
+    }
+
+    @FXML
+    void loeschenAusleiher() {
+        try {
+            Ausleiher ausleiher = tab1_leiher_tav.getSelectionModel().getSelectedItem();
+            Main.dbManager.loeschen(ausleiher);
+        } catch (Exception e) {
+            Tools.error("Error", "Kein Ausleiher gewählt");
+        }
+        populateAusleiherTable();
+    }
+
+    @FXML
+    void loeschenLeihobjekt() {
+        try {
+            Leihobjekt leihobjekt = tab1_objekt_tav.getSelectionModel().getSelectedItem();
+            Main.dbManager.loeschen(leihobjekt);
+        } catch (Exception e) {
+            Tools.error("Error", "Kein Leihobjekt gewählt");
         }
         populateLeihobjektTable();
     }

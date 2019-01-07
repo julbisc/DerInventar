@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oszimt.MainWindowController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oszimt.MainWindowController">
    <children>
       <GridPane fx:id="tab1_grp" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -62,6 +62,12 @@
                         <MenuItem mnemonicParsing="false" onAction="#newLeihobjektWindow" text="Leihobjekt" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Löschen">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loeschenAusleiher" text="Lösch Ausleiher" />
+                        <MenuItem mnemonicParsing="false" onAction="#loeschenLeihobjekt" text="Lösch Leihobjekt" />
+                     </items>
+                  </Menu>
                 <Menu mnemonicParsing="false" text="Hife">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Über" />
