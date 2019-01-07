@@ -36,6 +36,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
+                  <Button mnemonicParsing="false" onAction="#tab1_buchen_del_btn_action" text="Buchung löschen" />
               </items>
             </ToolBar>
             <TableView fx:id="tab1_leiher_tav" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
@@ -61,6 +62,12 @@
                         <MenuItem mnemonicParsing="false" onAction="#newLeihobjektWindow" text="Leihobjekt" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Löschen">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loeschenAusleiher" text="Lösch Ausleiher" />
+                        <MenuItem mnemonicParsing="false" onAction="#loeschenLeihobjekt" text="Lösch Leihobjekt" />
+                     </items>
+                  </Menu>
                 <Menu mnemonicParsing="false" text="Hife">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Über" />
@@ -80,8 +87,13 @@
                </rowConstraints>
                <children>
                   <TextField fx:id="ausleiher_suche_txtfield" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-                  <Button fx:id="ausleiher_show_btn" mnemonicParsing="false" onAction="#showAusleiherWindow" text="Anzeigen" GridPane.halignment="CENTER" />
+                  <Button fx:id="ausleiher_show_btn" mnemonicParsing="false" onAction="#showAusleiherWindow" text="Anzeigen" GridPane.halignment="RIGHT" />
                   <Label text="Filter" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="120.0" text="Ausleiher">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
             <GridPane layoutX="10.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -96,8 +108,13 @@
                </rowConstraints>
                <children>
                   <TextField fx:id="leihobjekt_suche_txtfield" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-                  <Button fx:id="leihobjekte_show_btn" mnemonicParsing="false" onAction="#showLeihobjektWindow" text="Anzeigen" GridPane.halignment="CENTER" />
+                  <Button fx:id="leihobjekte_show_btn" mnemonicParsing="false" onAction="#showLeihobjektWindow" text="Anzeigen" GridPane.halignment="RIGHT" />
                   <Label text="Filter" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="120.0" text="Leihobjekte">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
          </children>
